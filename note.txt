@@ -1,0 +1,46 @@
+datawhiz-enterprise/
+│
+├── main.py                        # Entry point: test/prod logic
+│
+├── config/
+│   └── settings.py              # Config .env centralizzata
+│
+├── cli/
+│   └── interface.py              # Prompt utente e output terminale
+│
+├── nlp/
+│   ├── semantic_parser_ai.py     # JSON semantico (dominio, intento, filtri)
+│   ├── job_planner_ai.py         # Generazione job Spark via OpenAI
+│   ├── parser.py                 # Parser offline
+│   └── registry.py               # Selettore: AI o fallback
+│
+├── core/
+│   ├── query_builder.py          # Prod: gestisce job dinamici
+│   ├── executor.py               # Esegue codice generato (compreso AI job)
+│   └── job_context.py            # Info su dataset disponibili
+│
+├── domain/
+│   ├── hr/jobs.py
+│   ├── sales/jobs.py
+│   └── ecommerce/jobs.py
+│
+├── data/                         # CSV e altri dataset
+├── manifest.json                # Descrizione dei dataset e colonne
+├── ecommerce.csv
+├── sample_submission.csv
+├── store.csv
+├── test.csv
+├── train.csv
+│
+├── data_loader/
+│   ├── __init__.py               # Esporta tutti i loader
+│   ├── loader_hr.py              # Carica HR (hr.csv)
+│   ├── loader_sales.py           # Carica vendite (train.csv, store.csv, ecc.)
+│   ├── loader_ecommerce.py       # Carica ecommerce.csv
+│   └── loader_registry.py        # Funzione unica get_loader(name)
+│
+├── logs/                         # File di log (AI call, job eseguiti)
+├── tests/                        # Unit test
+├── requirements.txt
+└── .env 
+

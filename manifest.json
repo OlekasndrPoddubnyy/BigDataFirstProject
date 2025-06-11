@@ -1,0 +1,63 @@
+{
+  "datasets": [
+    {
+      "name": "hr",
+      "path": "data/hr.csv",
+      "description": "Dati HR aziendali con informazioni su dipendenti, reparti, performance e abbandono.",
+      "columns": [
+        "Age", "Attrition", "BusinessTravel", "DailyRate", "Department", "DistanceFromHome",
+        "Education", "EducationField", "EmployeeCount", "EmployeeNumber", "EnvironmentSatisfaction",
+        "Gender", "HourlyRate", "JobInvolvement", "JobLevel", "JobRole", "JobSatisfaction",
+        "MaritalStatus", "MonthlyIncome", "MonthlyRate", "NumCompaniesWorked", "Over18", "OverTime",
+        "PercentSalaryHike", "PerformanceRating", "RelationshipSatisfaction", "StandardHours",
+        "StockOptionLevel", "TotalWorkingYears", "TrainingTimesLastYear", "WorkLifeBalance",
+        "YearsAtCompany", "YearsInCurrentRole", "YearsSinceLastPromotion", "YearsWithCurrManager"
+      ]
+    },
+    {
+      "name": "sales_train",
+      "path": "data/train.csv",
+      "description": "Dati storici delle vendite per negozio, giorno e cliente.",
+      "columns": [
+        "Store", "DayOfWeek", "Date", "Sales", "Customers", "Open",
+        "Promo", "StateHoliday", "SchoolHoliday"
+      ]
+    },
+    {
+      "name": "sales_test",
+      "path": "data/test.csv",
+      "description": "Dati di test per previsione vendite: id, giorno, promozioni, festività.",
+      "columns": [
+        "Id", "Store", "DayOfWeek", "Date", "Open", "Promo",
+        "StateHoliday", "SchoolHoliday"
+      ]
+    },
+    {
+      "name": "store_info",
+      "path": "data/store.csv",
+      "description": "Informazioni statiche sui negozi: tipo, concorrenza, promo e assortimento.",
+      "columns": [
+        "Store", "StoreType", "Assortment", "CompetitionDistance",
+        "CompetitionOpenSinceMonth", "CompetitionOpenSinceYear",
+        "Promo2", "Promo2SinceWeek", "Promo2SinceYear", "PromoInterval"
+      ]
+    },
+    {
+      "name": "sample_submission",
+      "path": "data/sample_submission.csv",
+      "description": "Template di output per la previsione vendite: Id e Sales.",
+      "columns": [
+        "Id", "Sales"
+      ]
+    },
+    {
+      "name": "ecommerce",
+      "path": "data/ecommerce.csv",
+      "description": "Eventi utente (click, acquisto) su prodotti e-commerce per sessione.",
+      "columns": [
+        "UserID", "SessionID", "Timestamp", "EventType",
+        "ProductID", "Amount", "Outcome"
+      ]
+    }
+  ]
+}
